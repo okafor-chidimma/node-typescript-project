@@ -1,0 +1,33 @@
+{
+  "name": "node-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/app.ts",
+    "babel:start:dev": "babel-node src/app.ts --extensions \".ts\"",
+    "start:dev": "nodemon src/app.ts --exec babel-node --extensions \".ts\"",
+    "tsc": "npx tsc -w",
+    "dev:babel": "npm run tsc && npm run start:dev",
+    "dev:nodemon": "nodemon dist/index.js"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.14.3",
+    "@babel/core": "^7.14.3",
+    "@babel/node": "^7.14.2",
+    "@babel/preset-env": "^7.14.4",
+    "@babel/preset-typescript": "^7.13.0",
+    "@types/body-parser": "^1.19.0",
+    "@types/cors": "^2.8.10",
+    "@types/express": "^4.17.11",
+    "@types/express-serve-static-core": "^4.17.21",
+    "@types/node": "^15.12.1",
+    "nodemon": "^2.0.7",
+    "typescript": "^4.3.2"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}
