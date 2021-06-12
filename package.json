@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "start": "node src/app.ts",
-    "babel:start:dev": "babel-node src/app.ts --extensions \".ts\"",
-    "start:dev": "nodemon src/app.ts --exec babel-node --extensions \".ts\"",
+    "babel:start:dev": "babel-node src/index.ts --extensions \".ts\"",
+    "start:dev:watch:mode": "nodemon src/index.ts --exec babel-node --extensions \".ts\"",
     "tsc": "npx tsc -w",
     "dev:babel": "npm run tsc && npm run start:dev",
     "dev:nodemon": "nodemon dist/index.js"
